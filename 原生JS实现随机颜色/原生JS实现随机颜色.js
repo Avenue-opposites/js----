@@ -57,4 +57,4 @@ class RondomColor {
     }
 };
 const color = new RondomColor();
-document.getElementById("container").style.background = color.hsl();
+document.getElementById("container").style.background = color.rgba();
