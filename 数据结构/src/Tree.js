@@ -132,9 +132,26 @@ export class AVLTree extends Tree {
     constructor(root) {
         super(root);
     }
+    insert(value) {
+        if(this.root.value === null) {
+            this.root.value = value;
+        }else {
+            this._insert(this.root,value);
+        }
+    }
+    _insert(node,value) {      
+        if(node === null) {
+            return new TreeNode(value,null,null);
+        }else if(value > node.value){
+            node.right = this._insert(node.right,value);
+        }else if(value < node.value) {
+            node.left = this._insert(node.left,value);
+        }
+        AVLTree.setBalance(node);
+        return node;
+    }
     static isBalance(root) {
         const difference = this.calculateHeight(root.left) - this.calculateHeight(root.right);
-        // console.log(difference);
         return difference === 0 || difference === -1 ||difference === 1;
     }
     //左旋转
@@ -161,10 +178,22 @@ export class AVLTree extends Tree {
         root.right = AVLTree.leftRotation(root.right);
         return AVLTree.rightRotation(root);
     }
-    // static balance(root) {
-    //     if(!AVLTree.isBalance(root)) {
-
-    //     }
-    // }
+    static setBalance(root) {
+        const factor = root === null ? 0 : this.calculateHeight(root.left) - this.calculateHeight(root.right);
+        console.log(root);
+        if(factor > 1) {
+            console.log("左重");
+            // AVLTree.leftRotation(root);
+           
+        }else if(factor < -1){
+            console.log("右重");
+            
+            // console.log(root);
+        }
+    }
 }
+
+
+
+
 

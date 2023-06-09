@@ -1,16 +1,12 @@
-import{ Tree,AVLTree } from './src/Tree.js';
-const tree = new AVLTree();
+import { AVLTree } from "./src/Tree.js";
 
-tree.insert(6);
-tree.insert(9);
-tree.insert(3);
-tree.insert(10);
-tree.insert(7);
-tree.insert(8);
+const AVL = new AVLTree();
 
-// console.log(AVLTree.isBalance(tree.root));
-// tree.root = AVLTree.rightToLeftRotation(tree.root);
-console.log(AVLTree.isBalance(tree));
-// console.log(tree.getDistanceAtTreeNode(4));
-// console.log(Tree.calculateHeight(tree.root));
-console.log(tree);
+AVL.insert(10);
+AVL.insert(20);
+AVL.insert(30);
+
+
+
+console.log(AVL);
+
