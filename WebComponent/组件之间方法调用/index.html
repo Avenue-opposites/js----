@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件之间方法调用</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <comment-card
+        style="--comment-card-bg: rgb(224, 95, 117);"
+        data-avatar="./images/1.webp"
+        data-name="张三"
+        data-content="哈哈哈"
+        data-career="前端工程师"
+      ></comment-card>
+      <comment-card
+        style="--comment-card-bg: rgb(75, 229, 155);"
+        data-avatar="./images/1.webp"
+        data-name="李四"
+        data-content="欢迎━(*｀∀´*)ノ亻!"
+        data-career="后端工程师"
+      ></comment-card>
+      <comment-card
+        style="--comment-card-bg: rgb(20, 184, 230);"
+        data-avatar="./images/1.webp"
+        data-name="柳贯一"
+        data-content="柳絮飞扬随风去, 无论云泥意贯一。"
+        data-career="全栈工程师"
+      ></comment-card>
+    </div>
+
+    <button class="open">open</button>
+</body>
+<script type="module" src="./index.js"></script>
+</html>

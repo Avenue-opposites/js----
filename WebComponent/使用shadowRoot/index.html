@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用shadowRoot</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <comment-card 
+        style="--comment-card-bg: rgb(47, 198, 248);"
+        data-content="谢谢鼓励。我公司是使用web components开发项目，我也是刚接触不久，有很多地方可能讲的不是很准确，仅供参考呢。好的，有时间我会努力更新这个系列的视频💪。"
+        data-avatar="./57245bfbff2976a71bb2049e8f168628c812a7cf.jpg@240w_240h_1c_1s_!web-avatar-nav.webp"
+        data-name="Mosh"
+        data-career="web components开发者"
+      ></comment-card>
+      <comment-card
+        style="--comment-card-bg: rgb(221, 27, 221);"
+        data-content="讲得太好了。讲的是很重要的，但多数人不会去了解的知识；希望多多更新"
+        data-avatar="./57245bfbff2976a71bb2049e8f168628c812a7cf.jpg@240w_240h_1c_1s_!web-avatar-nav.webp"
+        data-name="小明"
+        data-career="前端工程师"
+      ></comment-card>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

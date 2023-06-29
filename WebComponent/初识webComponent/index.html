@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <details-card 
+            style="background: #ffca28;"
+            data-title="web-component: Vanilla"
+            data-content="
+                原生JavaScript
+            "
+        ></details-card>
+        <details-card 
+            style="background: #42b883;"
+            data-title="web-component: Vue"
+            data-content="
+                渐进式
+                JavaScript 框架
+                易学易用，性能出色，适用场景丰富的 Web 前端框架。
+            "
+        ></details-card>
+        <details-card 
+            style="background: #149eca;"
+            data-title="web-component: React"
+            data-content="
+                React 让你可以通过组件来构建用户界面。你可以创建像 Thumbnail、LikeButton 和 Video 这样的组件。然后将它们组合成整个应用程序。
+            "
+        ></details-card>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

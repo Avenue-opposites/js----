@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用slot开发tab选项卡</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <custom-tabs>
+        <button slot="tab">Vanilla</button>
+        <button slot="tab">Vue</button>
+        <button slot="tab">React</button>
+        <div slot="panel">
+          <p>
+            Vanilla JS is a fast, lightweight, cross-platform framework for building incredible, powerful JavaScript applications.
+          </p>
+        </div>
+        <div slot="panel">
+          <p>
+            Vue.js (读音 /vjuː/, 类似于 view) 是一套构建用户界面的渐进式框架。
+          </p>
+        </div>
+        <div slot="panel">
+          <p>
+            React 是一个用于构建用户界面的 JavaScript 库。
+          </p>
+        </div>
+      </custom-tabs>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
